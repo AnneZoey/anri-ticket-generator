@@ -38,8 +38,6 @@ app.post('/upload', upload.single('image'), async (req, res) => {
     res.download(filePath, fileName, (err) => {
       if (err) {
         console.log(err);
-      } else {
-        fs.unlinkSync(filePath);
       }
     });
 
@@ -69,7 +67,7 @@ async function overlay(imageBuffer, text) {
   return overlayedBuffer;
 }
 
-app.listen(port, () => {
+app.listen(process.env.PORT || port, () => {
   console.log(`Server is running on http://localhost:${port}`);
 });
 
