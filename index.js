@@ -16,7 +16,6 @@ const upload = multer({ storage: storage });
 
 app.get('/', (req, res) => {
   res.render('index');
-  res.sendFile(__dirname + '/views/background.png');
 });
 
 app.post('/upload', upload.single('image'), async (req, res) => {
