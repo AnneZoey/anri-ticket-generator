@@ -7,30 +7,32 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+    <script>
+        function convertToUpperCase(inputElement) {
+          inputElement.value = inputElement.value.toUpperCase();
+        }
+    </script>
 </head>
 <body>
    <div id="content-container">
     <h1>RESERVE YOUR TICKET TODAY</h1>
     <form action="/upload" method="post" enctype="multipart/form-data">
         <label for="name">Enter Your Name:</label>
-        <input type="text" name="text" placeholder="ex. ANRI LIN" oninput="convertToUpperCase(this)" maxlength="10" id="nameInput">
+        <input type="text" name="text" placeholder="ex. ANRI LIN" oninput="convertToUpperCase(this)" maxlength="15" id="nameInput">
         <label for="image">Upload Your Image:</label>
         <input type="file" name="image" required>
-        <input type="submit"></input>
+        <input type="submit" value="SUBMIT" id="submit-button"></input>
     </form>
    </div>
 </body>
-<script>
-    function convertToUpperCase(inputElement) {
-      inputElement.value = inputElement.value.toUpperCase();
-    }
-</script>
 <style>
     body {
         background-color: #411b46;
+        background: linear-gradient(to bottom, #411b46, #2c0531);
         padding: 0;
         margin: 0;
         display: flex;
+        flex-direction: column;
         align-items: center;
         justify-content: center;
         height: 100vh;
@@ -39,7 +41,7 @@
     h1 {
         font-size: 40px;
         margin: 0;
-        padding: 0;
+        padding: 15px 0px 15px 0px;
     }
 
     #content-container {
@@ -52,12 +54,13 @@
         width: 500px;
         font-family: 'Anton', sans-serif;
         border-radius: 15px;
+        transition: transfrom 0.5s ease-in-out;
     }
 
     form {
         display: flex;
         flex-direction: column;
-        align-items: center;
+        align-items: left;
         justify-content: center;
         width: 60%;
     }
@@ -66,19 +69,34 @@
         background-color: #ffffff;
         border: 1px solid #ffffff;
         border-color: none;
-        font-family: 'Courier New', Courier, monospace;
+        
         padding: 10px;
-        margin: 10px 0px 10px 0px;
+        
     }
 
     input {
         display: block;
-        width: 100%;
+        margin: 10px 0px 10px 0px;
+        font-family: 'Courier New', Courier, monospace;
     }
 
-    button {
+    #submit-button {
         display: block;
         align-self: center;
+        font-size: 15px;
+        padding: 10px;
+    }
+
+    #footer-text {
+        color: #fff;
+        font-family: 'Courier New', Courier, monospace;
+        font-size: 12px;
+    }
+
+    @media screen and (max-width: 500px) {
+        #content-container {
+            transform: scale(0.6);
+        }
     }
 </style>
 </html>
