@@ -38,6 +38,8 @@ app.post('/upload', upload.single('image'), async (req, res) => {
     res.download(filePath, fileName, (err) => {
       if (err) {
         console.log(err);
+      } else {
+        fs.unlinkSync(filePath);
       }
     });
 
