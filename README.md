@@ -2,7 +2,7 @@
 
 Ticket Generator is a web application that allows users to upload an image and add text to it to create a custom ticket. The application uses the Express web framework and the Sharp image processing library to resize and round the corners of the uploaded image, overlay text on the image, and save the resulting image to a file.
 
-This project was created as part of the promotion of the song "Eyes Closed" by Anri, in collaboration with AUDIOLOGIE and Dreamtonics.
+This project was created as part of the promotion of my latest release "Eyes Closed" featuring ANRI, in collaboration with [AUDIOLOGIE](https://audiologie.us/) and [Dreamtonics](https://dreamtonics.com/synthesizerv/).
 
 ## Usage
 
