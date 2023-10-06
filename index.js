@@ -39,7 +39,7 @@ app.post('/upload', upload.single('image'), async (req, res) => {
       if (err) {
         console.log(err);
       } else {
-        fs.unlinkSync(filePath);
+        //fs.unlinkSync(filePath);
       }
     });
 
