@@ -32,7 +32,7 @@ app.post('/upload', upload.single('image'), async (req, res) => {
 
     const overlayedImageBuffer = await overlay(uploadedImage, text);
     const fileName = `${text}_ticket.png`;
-    const filePath = path.join(__dirname, 'temp', fileName);
+    const filePath = '/opt/render/project/src/temp/' + fileName;
     fs.writeFileSync(filePath, overlayedImageBuffer);
 
     res.download(filePath, fileName, (err) => {
