@@ -8,7 +8,7 @@ const app = express();
 const port = 5000;
 
 app.set('view engine', 'ejs');
-app.use(express.static(path.join(__dirname, 'temp')));
+app.use(express.static(path.join(__dirname, 'public')));
 app.use(express.static(path.join(__dirname, 'views')));
 
 const storage = multer.memoryStorage();
