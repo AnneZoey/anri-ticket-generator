@@ -6,7 +6,7 @@ This project was created as part of the promotion of my latest release "Eyes Clo
 
 ## Usage
 
-To use the application, go to https://test-tix-gen.onrender.com and follow these steps:
+To use the application, go to https://tickets.audiologie.us and follow these steps:
 
 1. Enter your name in the "Enter Your Name" field.
 2. Click the "Choose File" button and select an image file to upload.
