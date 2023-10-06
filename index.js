@@ -59,7 +59,7 @@ async function overlay(imageBuffer, text) {
         left: 856
       },
       {
-        input: Buffer.from(`<svg width="400" height="100" xmlns="http://www.w3.org/2000/svg"><text x="10" y="40" font-family="Anton" font-size="40" fill="white">${text}</text></svg>`),
+        input: Buffer.from(`<svg width="400" height="100" xmlns="http://www.w3.org/2000/svg"><defs><style>@import url('/fonts/Anton-Regular.ttf');</style></defs><text x="10" y="40" font-family="Anton" font-size="40" fill="white">${text}</text></svg>`),
         top: 277,
         left: 1038
       },
