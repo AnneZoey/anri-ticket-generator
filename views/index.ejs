@@ -50,6 +50,15 @@
         <input type="submit" value="SUBMIT" id="submit-button"></input>
     </form>
    </div>
+   <div class="instructions">
+    <ol>
+        <li>✏️ Enter your name.</li>
+        <li>📷 Upload an image.</li>
+        <li>📥 Click "SUBMIT" to generate your ticket and download the file.</li>
+        <li>📣 Share your ticket on social media with the tag <span>#ANRI_NATION.</span></li>
+        <li>📺 Get ready for the <a href="https://youtu.be/t3fgdYO2ZY0">'Eyes Closed' MV premiere</a> this Saturday, Oct. 14, 2023 @ 5PM PST.</li>
+    </ol>
+   </div>
 </body>
 <style>
     body {
@@ -64,10 +73,30 @@
         height: 100vh;
     }
 
+    a, span {
+        color: #53bbf7;
+    }
+
     h1 {
         font-size: 40px;
         margin: 0;
         padding: 15px 0px 15px 0px;
+    }
+
+    .instructions {
+        color: #fff;
+        font-family: 'Anton', sans-serif;
+        font-size: 15px;
+        margin-top: 0px;
+        width: 500px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .instructions li {
+        margin: 10px 0px 10px 0px;
     }
 
     #content-container {
@@ -121,7 +150,38 @@
 
     @media screen and (max-width: 500px) {
         #content-container {
-            transform: scale(0.6);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background-color: #00000067;
+            color: #fff;
+            width: 300px;
+            font-family: 'Anton', sans-serif;
+            border-radius: 15px;
+            transition: transfrom 0.5s ease-in-out;
+        }
+        
+        #content-container h1 {
+            font-size: 25px;
+            margin: 0;
+            padding: 15px 0px 15px 0px;
+        }
+
+        .instructions {
+            color: #fff;
+            font-family: 'Anton', sans-serif;
+            font-size: 12px;
+            margin-top: 0px;
+            width: 300px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .instructions li {
+            margin: 10px 0px 10px 0px;
         }
     }
 </style>
